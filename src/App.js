@@ -19,7 +19,7 @@ function App() {
       });
   };
 
-  // Should be called when SignOut is clicked (We are Yet to add that button)
+  // Should be called when SignOut is clicked
   const handleSignOut = () => {
     auth.signOut();
     setUser(null);
@@ -27,6 +27,7 @@ function App() {
 
   return (
     <div className="app">
+      {/* Conditionally rendering JSX based on state - If user is present  */}
       {!user ? (
         <>
           <h4>SIGNIN</h4>
